@@ -1,6 +1,6 @@
 return function()
     local self = {
-        apikey = "4a73651abd9f65f4024465e1df0471e6", -- api key
+        apikey = "", -- api key
         lang = "en",                                 -- api language
         format = "json",                             -- api format
     }
