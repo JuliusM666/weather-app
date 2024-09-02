@@ -1,0 +1,11 @@
+
+/mnt/c/Users/USER/Desktop/projects/weather-app
+https://www.lua.org/pil/16.2.html
+https://openweathermap.org/api/one-call-3
+
+
+
+
+check
+readme
+
