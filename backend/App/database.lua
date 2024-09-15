@@ -3,7 +3,6 @@ return function()
     local self = {
         db = sqlite3.open('database/database.sqlite3'), -- open or create db if doent exist
 
-
     }
     local setup = function() -- create table if it does not exist
         self.db:exec 'CREATE TABLE IF NOT EXISTS favourite_cities (id INTEGER PRIMARY KEY AUTOINCREMENT,city VARCHAR(100) UNIQUE)'
@@ -30,11 +29,10 @@ return function()
         end
         return false
     end
-
     return {
         findAll = findAll,
         store = store,
         destroy = destroy,
-        find = find
+        find = find,
     }
 end

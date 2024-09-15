@@ -2,9 +2,14 @@ local UserInterface = require "App.userInterface"
 local Config = require "App.configuration"
 local Api = require "App.api"
 local Database = require "App.database"
+local JsonDecoder = require "App.jsonDecoder"
+local XmlDecoder = require "App.xmlDecoder"
 return function()
+    config = Config()
+    decoder = config.getFormat() == "json" and JsonDecoder() or
+        XmlDecoder() -- set decoder
     local self = {
-        api = Api(Config()),
+        api = Api(config, decoder),
         userInterface = UserInterface(),
         database = Database(),
     }

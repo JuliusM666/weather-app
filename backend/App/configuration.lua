@@ -1,10 +1,10 @@
 return function()
     local self = {
-        apikey = "", -- api key
-        lang = "en",                                 -- api language
-        format = "json",                             -- api format
+        apikey = "",          -- api key
+        lang = "en",          -- api language
+        format = "json",      -- api format
     }
-    local getKey = function()                        -- api key getter
+    local getKey = function() -- api key getter
         return self.apikey == "" and error("Api key is not provided") or self.apikey
     end
     local getLang = function() -- language getter
